@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG</title>
+
+	<style>
+		body {
+			padding-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<svg>
+			<circle r="50" cx="150" cy="75"/>
+		</svg>
+	</div>
+	<hr>
+	<div>
+		<label>r</label>
+		<input type="range" id="r" oninput="fun1()">
+	</div>
+	<div>
+		<label>cx</label>
+		<input type="range" id="cx" oninput="fun2()">
+	</div>
+	<div>
+		<label>cy</label>
+		<input type="range" id="cy" oninput="fun3()">
+	</div>
+</body>
+
+<script>
+	function fun1() {
+		var input = document.getElementById('r');
+		var circle = document.getElementsByTagName('circle')[0];
+
+		circle.setAttribute('r', input.value);
+	}
+	function fun2() {
+		var input = document.getElementById('cx');
+		var circle = document.getElementsByTagName('circle')[0];
+		
+		circle.setAttribute('cx', input.value);
+	}
+	function fun3() {
+		var input = document.getElementById('cy');
+		var circle = document.getElementsByTagName('circle')[0];
+		
+		circle.setAttribute('cy', input.value);
+	}
+</script>
+
+</html>
